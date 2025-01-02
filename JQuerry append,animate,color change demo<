@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JQuerry append,animate,color change demo</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<style>
+			.box{
+				width:100px;
+				height:100px;
+				background-color:blue;
+				}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>JQuerry append,animate,color change demo<h1>
+			<h2>a)append</h2>
+			<p id="existingParagraph">This is existing paragraph</p>
+			<ul id="existingList">
+				<li>Existing item1</li>
+				<li>Existing item2</li>
+			</ul>
+			<button id="apppendButton">Append Content</button>
+			
+			<h2>b)animate box</h2>
+			<div id="animateBox" class="box"></div>
+			<button id="animateButton">animate box</button>
+			
+			<h2>c)animate and color change<h2>
+			<div id="colorBox" class="box"></div>
+			<button id="coloranimateButton">Color change</button>
+		</div>
+		<script>
+			$(document).ready(function(){
+				//a)
+				$("#apppendButton").click(function(){
+					$("#existingParagraph").append("This content is appended");
+					$("#existingList").append("<li>This is appended list</li>");
+				});
+				
+				//b)
+				$("#animateButton").click(function(){
+					$("#animateBox").animate({
+						width:"200px",
+						height:"200px",
+						},1000);
+					});
+					
+				//c)
+				$("#coloranimateButton").click(function(){
+					$("#colorBox").animate({
+						width:"200px",
+						height:"200px"
+						},{
+							duration:1000,
+							step:function(now,fx){
+								if(fx.prop==="width"){
+									$(this).css("background-color", `rgb(${Math.round(now)},152,219)`);
+								}
+							}
+						});
+					});
+				});
+			</script>
+		</body>
+				
+</html>
