@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>time table</title>
+		<style>
+		
+			body{
+				font-family:arial,sans-serif;
+				color:black;
+				margin:5rem 10rem;
+				align-items:center;
+				
+			}
+			table{
+			border:1px solid black;
+			}
+			tr,td,th{
+				background-color:rgba(0,100,0,0.4);
+				font-family:arial,sans-serif;
+				border:1px solid black;
+				border-radius:5px;
+				text-align:center;
+				text-transform:uppercase;
+				width:17px;
+				height:3px;
+			}
+			.elec{
+				background-color:rgba(0,0,150,0.3);
+			}
+			.lab{
+			background-color:rgba(0,0,200,0.4);
+			}
+			thead,tfoot{
+			font-weight:bold;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="11">TIME TABLE</th>
+				</tr>
+			</thead>
+			<thead>
+				<tr>
+					<th>Day/Time</th>
+					<th>9:00am-9:55am</th>
+					<th>9:55am-10:50am</th>
+					<th>10:50am-11:10am</th>
+					<th>11:10am-12:05pm</th>
+					<th>12:05pm-1:00pm</th>
+					<th>1:00pm-2:00pm</th>
+					<th>2:00pm-2:55pm</th>
+					<th>2:55pm-3:05pm</th>
+					<th>3:05pm-4:00pm</th>
+					<th>4:00pm-4:55pm</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>monday</td>
+					<td class="elec">ai</td>
+					<td>se</td>
+					<td rowspan="4">break</td>
+					<td>toc</td>
+					<td>rm</td>
+					<td rowspan="6">lunch break</td>
+					<td>cn</td>
+					<td rowspan="4">break</td>
+					<td colspan="2" class="lab">mini project</td>					
+				</tr>
+				<tr>
+					<td>tuesday</td>
+					<td>cn</td>
+					<td>se</td>
+					<td>toc</td>
+					<td>toc</td>
+					<td>rm</td>
+					<td colspan="2" class="lab">web technology lab</td>					
+				</tr>
+				<tr>
+					<td>wednesday</td>
+					<td>rm</td>
+					<td class="elec">ai</td>
+					<td>toc</td>
+					<td>evs</td>
+					<td>cn</td>
+					<td colspan="2" class="lab">mini project</td>					
+				</tr>
+				<tr>
+					<td>thursday</td>
+					<td colspan="2">placement</td>
+					<td colspan="2" class="lab">cn lab</td>
+					<td>toc</td>
+					<td>certification course</td>
+					<td>library</td>
+				</tr>
+				<tr>
+					<td>friday</td>
+					<td colspan="4">placement</td>
+					<td class="elec">ai</td>
+					<td>se</td>
+					<td colspan="3">nss/yoga/sports</td>
+				</tr>
+				<tr>
+					<td>saturday</td>
+					<td colspan="5">club activity</td>
+					<td colspan="4">department association program</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="11">all the best</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>
