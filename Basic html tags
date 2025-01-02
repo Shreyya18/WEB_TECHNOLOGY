@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My first Web Page</title>
+	</head>
+	<body>
+		<marquee>Basic HTML tags</marquee>
+		<h1>This is heading 1</h1>
+		<h2>This is heading 2</h2>
+		<h3>This is heading 3</h3>
+		<h4>This is heading 4</h4>
+		<h5>This is heading 5</h5>
+		<h6>This is heading 6</h6>
+		<p>HTML stands for HyperText markUp Language.<br/>HTML is 		used to provide strucute to a wweb page.</p>
+		<hr>
+		<p>HTML stands for <blockquote>Hyper Text Markup 			Language</blockquote></p>
+		<pre>text in pre element is displayed in fixed font and it 		also preserves white space and 
+		line break.</pre>
+		<p>This is a <b>Bold text</b></p>
+		<p>This is a <u>Underlined text</u></p>
+		<p>S<sub>1</sub></p>
+		<p>X<sup>3</sup></p>
+	</body>
+</html>
