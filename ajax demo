@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>ajax demo</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style></style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>AJAX DEMO</h1>
+			<h2>a)Opearation without jQuery</h2>
+			<button onclick="operationWithoutjQuery()">Operation without jquery</button>
+			<pre id="result-a"></pre>
+			
+			<h2>b)Opearation with jQuery</h2>
+			<button onclick="operationWithjQuery()">Operation with jquery</button>
+			<pre id="result-b"></pre>
+			
+			<h2>c)getJSOn Opearation</h2>
+			<button onclick="getJson()">get JSON</button>
+			<pre id="result-c"></pre>
+			
+			<h2>d)parse JSOn</h2>
+			<button onclick="parseJson()">parse JSOn</button>
+			<pre id="result-d"></pre>
+		</div>
+		<script>
+			
+			const simulatedData={
+				text:"this is a sample text from simulated server response",
+				json:{
+					name:"john doe",
+					age:30,
+					city:"new york"
+				}
+			};
+			
+			function operationWithoutjQuery(){
+				setTimeout(function(){
+					document.getElementById("result-a").textContent=simulatedData.text;
+					},500);
+			}
+			
+			function operationWithjQuery(){
+				$.Deferred(function(deferred){
+					setTimeout(function(){
+						deferred.resolve(simulatedData.text);
+					},500);
+				}). done(function(result){
+					$("#result-b").text(result);
+				});
+			}
+			
+			function getJson(){
+				$.Deferred(function(deferred){
+					setTimeout(function(){
+						deferred.resolve(simulatedData.json);
+					},500);
+				}).done(function(result){
+					$("#result-c").text(JSON.stringify(result,null,2));
+				});
+			}
+				
+			function parseJson(){
+				var jsonString=JSON.stringify(simulatedData.json);
+				var jsObject=$.parseJSON(jsonString);
+				$("#result-d").text(JSON.stringify(jsObject,null,2));
+			}
+		</script>
+	</body>
+</html>
