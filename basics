@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Supra</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1>car info</h1>
+		<div class="container">
+		<a href="#"><img src="noise.jpg" alt="car"></a>
+		<div class="content">
+			<h2>Toyato supra</h2>
+			<time>april 1978-august 2022</time>
+			<hr>
+			<div class="desc">
+				<p><span>Toyato supra</span> is famous sports car.Which was invented in 1978. basically supra is a latin prefix with the meaning "above" or "go beyond"</p> 
+			</div>
+		</div>
+		</div>
+		</body>
+</html>
+
+style.css
+*{
+	font-family:arial;
+	color:black;
+}
+body{
+	background:linear-gradient(45deg, #0c525c, black);
+	margin:5rem 15rem;
+}
+
+.container{
+	width:700px;
+	height:200px;
+	background-color:white;
+	border-radius:15px;
+	display:flex;
+}
+
+img{
+	height:170px;
+	align-items:left;
+	border-radius:25px;
+	padding:15px;
+}
+
+h1{
+	text-decoration:underline;
+	padding:10px;
+	margin:10px;
+	color:white;
+}
+
+.content{
+	text-align:center;
+	padding:5px;
+}
+time{
+	color:blue;
+	font-size:10px;
+}
+h2{
+	margin-bottom:0px;
+}
+hr{
+	border-color:blue;
+}
+
+.desc{
+	font-family:armenian;
+	margin:5px;
+	
+}
+
+span{
+	color:blue;
