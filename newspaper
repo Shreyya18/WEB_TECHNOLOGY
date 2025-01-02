@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The daily chronicle</title>
+		<style>
+			body{
+			width:600px;
+			background-color:#e6e6e6;
+			border:1px solid black;
+			margin:5rem 20rem;
+			}
+			
+			header{
+				background-color:black;
+				padding:20px;
+				color:white;
+				text-align:center;
+			}		
+			header h1{
+				padding:0;
+				margin:0;
+			}
+			nav{
+				padding:10px;
+				background-color:#556677;
+			}
+			
+			nav ul{
+				margin:0;
+				list-style:none;
+			}
+			nav ul li{
+				padding:0;
+				display:inline;
+			}
+			
+			nav ul li a{
+				text-decoration:none;
+				margin-right:20px;
+			}
+			
+			main{
+			display:flex;
+			margin-top:10px;
+			margin-bottom:10px;
+			}
+			
+			section{
+				flex:2;
+			}
+			
+			article{
+				margin-bottom:10px;
+				background-color:white;
+				padding:10px;
+
+			}
+			
+			aside{
+				flex:1;
+				background-color:white;
+				padding:10px;
+				margin-left:10px;
+				margin-bottom:10px;
+				}
+			figure{
+				margin:0;
+			}
+			table,td,tr{
+				border-collapse:collapse;
+				border:1px solid black;
+				width:100%;
+			}
+			
+			footer{
+				background-color:black;
+				color:white;
+				padding:20px;
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>The Daily Chronicle</h1>
+		</header>
+		<nav>
+			<ul>
+				<li> <a href="#">Home</a></li>
+				<li> <a href="#">Politics</a></li>
+				<li> <a href="#">Entertainment</a></li>
+				<li> <a href="#">Technology</a></li>
+				<li> <a href="#">Sports</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section>
+				<article>
+					<h3>Breaking news:Major technological breakthrough:</h3>
+					<p>scientist have announced groundbreaking discovery in the field of quantum computing</p>
+					<figure>
+						<img src="noise.jpg" alt="noise" height="200px">
+						<figcaption>Quantum computing</figcaption>
+					</figure>
+				</article>
+				
+				<article>
+					<h3>Local sports teams wins championship</h3>
+					<p>In a thrilling match, local team wins championship</p>
+					<table>
+						<tr>
+							<td>Team</td>
+							<td>Score</td>
+						</tr>
+						<tr>
+							<td>Local heroes</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>Royal challengers</td>
+							<td>2</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			
+			<aside>
+				<h3>Weather report</h3>
+				<p>Expect sunny sky with a high of 75 F</p>
+				
+				<h3>Upcoming events</h3>
+				<ul>
+					<li>City festival-This weekend</li>
+					<li>Tech conferenece-Next month</li>
+				</ul>
+			</aside>
+		</main>
+		<footer>
+			<p>&copy; 2024 The Daily Chronicle all rights are reserved</p>
+		</footer>				
+	</body>
+</html>
