@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Students record</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Students record</h1>
+			<?php
+				$host='localhost';
+				$dbname='students_record';
+				$username='root';
+				$password='';
+				
+				try{
+					$pdo=new PDO("mysql:host=$host; dbname=$dbname", $username, $password);
+					$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+					
+					$stmt=$pdo->query("SELECT * FROM students");
+					$students=$stmt->fetchAll(PDO::FETCH_ASSOC);
+						
+					function selectionSort(&$arr,$n){
+						for($i=0;$i<$n-1;$i++){
+							$min_idx=$i;
+							for($j=$i+1;$j<$n;$j++){
+								if($arr[$j]['gpa']<$arr[$min_idx]['gpa']){
+									$min_idx=$j;
+								}
+							}
+							$temp=$arr[$i];
+							$arr[$i]=$arr[$min_idx];
+							$arr[$min_idx]=$temp;
+					}
+					}
+				selectionSort($students,count($students));
+
+				echo "<table>";
+				echo "<tr><th>id</th><th>name</th><th>gpa</th></tr>";
+				foreach($students as $student){
+					echo "<tr>";
+					echo "<td>" .htmlspecialchars($student['id']). "</td>";
+					echo "<td>" .htmlspecialchars($student['name']). "</td>";
+					echo "<td>" .htmlspecialchars($student['gpa']). "</td>";
+					echo "<tr>";
+				}
+				echo "</table>";
+			}catch(PDOException $e){
+				echo "Connection failed:". $e->getMessage();
+			}
+		?>
+	</div>
+</body>
+
+</html>
